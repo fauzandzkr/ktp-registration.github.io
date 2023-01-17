@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- START MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- START KOLOM INPUT -->
+        <div class="left-side">
+            <h2 class="title">FORMULIR PENGISIAN E-KTP</h2>
+
+            <!-- START INPUTAN -->
+            <div class="form-ktp">
+
+                <!-- [INPUT] START BARIS USERNAME - JENIS KELAMIN -->
+                <form method="post">
+                    <div class="baris">
+                        <input type="text" required class="isian-nama">
+                        <span></span>
+                        <label>Masukkan Nama Anda</label>
+                    </div>
+                    
+                    <div class="baris">
+                        <input type="text" required class="isian-lahir">
+                        <span></span>
+                        <label>Tempat, Tanggal Lahir</label>
+                    </div>
+                </form>
+                <!-- [INPUT] END BARIS USERNAME - JENIS KELAMIN -->
+
+                <!-- [INPUT] START BARIS LAHIRAN - GOLDAR -->
+                <form method="post">
+                    <div class="baris">
+                        <!-- <input type="text" required class="isian-gender"> -->
+                        <select name="" id="" class="isian-gender">
+                            <option></option>
+                            <option value="LAKI-LAKI">Laki-Laki</option>
+                            <option value="PEREMPUAN">Perempuan</option>
+                        </select>
+                        <span></span>
+                        <label>Jenis Kelamin</label>
+                    </div>
+                    <div class="baris">
+                        <!-- <input type="text" required class="isian-goldar"> -->
+                        <select name="" id="" class="isian-goldar">
+                            <option></option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="O">O</option>
+                            <option value="AB">AB</option>
+                        </select>
+                        <span></span>
+                        <label>Golongan Darah</label>
+                    </div>
+                </form>
+                <!-- [INPUT] END BARIS LAHIRAN - GOLDAR -->
+
+                <!-- [INPUT] START BARIS PROVINSI - KOTA -->
+                <form method="post">
+                    <div class="baris">
+                        <!-- <input type="text" required class="isian-prov"> -->
+                        <select name="slctprov" id="slctprov" class="isian-prov" onchange="populate(this.id,'slctkota')">
+                            <option></option>
+                            <option value="JAWA BARAT">*Jawa Barat</option>
+                            <option value="ACEH">Aceh</option>
+                            <option value="SUMATRA UTARA">Sumatra Utara</option>
+                            <option value="SUMATRA BARAT">Sumatra Barat</option>
+                            <option value="RIAU">Riau</option>
+                            <option value="JAMBI">Jambi</option>
+                            <option value="SUMATRA SELATAN">Sumatra Selatan</option>
+                            <option value="BENGKULU">Bengkulu</option>
+                            <option value="LAMPUNG">Lampung</option>
+                            <option value="KEPULAUAN BANGKA BELITUNG">Kepulauan Bangka Belitung</option>
+                            <option value="KEPULAUAN RIAU">Kepulauan Riau</option>
+                            <option value="DKI JAKARTA">DKI Jakarta</option>
+                            <option value="JAWA TENGAH">Jawa Tengah</option>
+                            <option value="DI YOGYAKARTA">DI Yogyakarta</option>
+                            <option value="JAWA TIMUR">Jawa Timur</option>
+                            <option value="BANTEN">Banten</option>
+                            <option value="BALI">Bali</option>
+                            <option value="NUSA TENGGARA BARAT">Nusa Tenggara Barat</option>
+                            <option value="NUSA TENGGARA TIMUR">Nusa Tenggara Timur</option>
+                            <option value="KALIMANTAN BARAT">Kalimantan Barat</option>
+                            <option value="KALIMANTAN TENGAH">Kalimantan Tengah</option>
+                            <option value="KALIMANTAN SELATAN">Kalimantan Selatan</option>
+                            <option value="KALIMANTAN TIMUR">Kalimantan Timur</option>
+                            <option value="KALIMANTAN UTARA">Kalimantan Utara</option>
+                            <option value="SULAWESI UTARA">Sulawesi Utara</option>
+                            <option value="SULAWESI TENGAH">Sulawesi Tengah</option>
+                            <option value="SULAWESI SELATAN">Sulawesi Selatan</option>
+                            <option value="">Sulawesi Tenggara</option>
+                            <option value="">Gorontalo</option>
+                            <option value="">Sulawesi Barat</option>
+                            <option value="">Maluku</option>
+                            <option value="">Maluku Utara</option>
+                            <option value="">Papua</option>
+                            <option value="">Papua Barat</option>
+                            <option value="">Papua Selatan</option>
+                            <option value="">Papua Tengah</option>
+                            <option value="">Papua Pegunungan</option>
+                            <option value="">Papua Barat Daya</option>
+                        </select>
+                        <span></span>
+                        <label>Provinsi</label>
+                    </div>
+                    <div class="baris">
+                        <!-- <input type="text" required class="isian-kota"> -->
+                        <select name="slctkota" id="slctkota" class="isian-kota">
+                            <!-- <option></option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option> -->
+                        </select>
+                        <span></span>
+                        <label>Kota</label>
+                        
+                    </div>
+                </form>
+                <!-- [INPUT] END BARIS PROVINSI - KOTA -->
+
+                <!-- [INPUT] START BARIS ALAMAT - AGAMA -->
+                <form method="post">
+                    <div class="baris">
+                        <input type="text" required class="isian-alamat">
+                        <span></span>
+                        <label>Alamat</label>
+                    </div>
+                    <div class="baris">
+                        <input type="text" required class="isian-rtrw">
+                        <span></span>
+                        <label>RT/RW</label>
+                    </div>
+                </form>
+                <!-- [INPUT] END BARIS ALAMAT - AGAMA -->
+
+                <!-- [INPUT] START RT/RW - STATUS KAWIN -->
+                <form method="post">
+                    
+                    <div class="baris">
+                        <!-- <input type="text" required class="isian-keldesa"> -->
+                        <select name="" id="" class="isian-keldesa">
+                            <option></option>
+                            <option value="CAMPAKA">Campaka</option>
+                            <option value="CIROYOM">Ciroyom</option>
+                            <option value="DUNGUSCARIANG">Dunguscariang</option>
+                            <option value="GARUDA">Garuda</option>
+                            <option value="KEBON JERUK">Kebon Jeruk</option>
+                            <option value="MALEBER">Maleber</option>
+                            <option value="CIBADAK">Cibadak</option>
+                            <option value="KARANGANYAR">Karanganyar</option>
+                            <option value="KARASAK">Karasak</option>
+                            <option value="ANTAPANI KIDUL">Antapani Kidul</option>
+                        </select>
+                        <span></span>
+                        <label>Kel/Desa</label>
+                    </div>
+                    
+                    <div class="baris">
+                        <!-- <input type="text" required class="isian-kec"> -->
+                        <select name="" id="" class="isian-kec">
+                            <option></option>
+                            <option value="ANDIR">Andir</option>
+                            <option value="ASTANA ANYAR">Astana Anyar</option>
+                            <option value="ANTAPANI">Antapani</option>
+                            <option value="ARCAMANIK">Arcamanik</option>
+                            <option value="BABAKAN CIPARAY">Babakan Ciparay</option>
+                            <option value="BANDUNG KIDUL">Bandung Kidul</option>
+                            <option value="BANDUNG KULON">Bandung Kulon</option>
+                            <option value="BANDUNG WETAN">Bandung Wetan</option>
+                            <option value="BATUNUNGGAL">Batununggal</option>
+                            <option value="BOJONGLOA KALER">Bojongloa Kaler</option>
+                        </select>
+                        <span></span>
+                        <label>Kecamatan</label>
+                    </div>
+                </form>
+                <!-- [INPUT] END RT/RW - STATUS KAWIN -->
+
+                <!-- [INPUT] START AGAMA - KAWIN -->
+                <form method="post">
+                    
+                    <div class="baris">
+                        <!-- <input type="text" required class="isian-agama> -->
+                        <select name="" id="" class="isian-agama">
+                            <option></option>
+                            <option value="ISLAM">Islam</option>
+                            <option value="PROTESTAN">Protestan</option>
+                            <option value="KATOLIK">Katolik</option>
+                            <option value="HINDU">Hindu</option>
+                            <option value="BUDDHA">Buddha</option>
+                            <option value="KHONGHUCU">Khonghucu</option>
+                        </select>
+                        <span></span>
+                        <label>Agama</label>
+                    </div>
+                    <div class="baris">
+                        <!-- <input type="text" required class="isian-kawin"> -->
+                        <select name="" id="" class="isian-kawin">
+                            <option></option>
+                            <option value="MENIKAH">Menikah</option>
+                            <option value="BELUM MENIKAH">Belum Menikah</option>
+                            <option value="CERAI MATI">Cerai Mati</option>
+                            <option value="CERAI HIDUP">Cerai Hidup</option>
+                        </select>
+                        <span></span>
+                        <label>Status Perkawinan</label>
+                    </div>
+                    
+                </form>
+                <!-- [INPUT] END KEL/DESA - PEKERJAAN -->
+
+                <!-- [INPUT] START KECAMATAN - KEWARGANEGARAAN -->
+                <form method="post">
+                    <div class="baris">
+                        <input type="text" required class="isian-job">
+                        <span></span>
+                        <label>Pekerjaan</label>
+                    </div>
+                    <div class="baris">
+                        <!-- <input type="text" required class="isian-warga"> -->
+                        <select name="" id="" class="isian-warga">
+                            <option></option>
+                            <option value="WNI">Warga Negara Indonesia</option>
+                            <option value="WNA">Warga Negara Asing</option>
+                        </select>
+                        <span></span>
+                        <label>Kewarganegaraan</label>
+                    </div>
+                </form>
+                <!-- [INPUT] END KECAMATAN - KEWARGANEGARAAN -->
+
+                <!-- [INPUT] START BERLAKU - NIK -->
+                <form method="post">
+                    <div class="baris">
+                        <input type="text" required class="isian-berlaku">
+                        <span></span>
+                        <label>Berlaku Hingga</label>
+                    </div>
+                    <div class="baris">
+                        <input type="text" required class="isian-nik">
+                        <span></span>
+                        <label>NIK</label>
+                    </div>
+                </form>
+                <!-- [INPUT] END BERLAKU - NIK -->
+
+            </div>
+            <!-- END INPUTAN -->
+
+        </div>
+        <!-- END KOLOM INPUT   -->
+
+        <!-- START KOLOM OUTPUT -->
+        <div class="right-side">
+            <h2 class="title">HASIL CETAK E-KTP</h2>
+
+            <!-- START OUTPUT DEPAN -->
+            <div class="depan">
+                <div class="cover">
+                    <div class="header">
+                        <div class="header-sejajar">
+                            <span>PROVINSI<span class="space">-</span></span>
+                            <div class="prov"></div>
+                        </div>
+                        <div class="header-sejajar">
+                            <!-- <span>KOTA</span> -->
+                            <div class="kota">KOTA / KABUPATEN</div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="left-content-ktp">
+                            <div class="sejajar">
+                                <span>NIK</span>
+                                <span class="titikdua">:</span>
+                                <div class="nik">################</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Nama</span>
+                                <span class="titikdua">:</span>
+                                <div class="nama">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Tempat/Tgl Lahir</span>
+                                <span class="titikdua">:</span>
+                                <div class="lahir">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Jenis Kelamin</span>
+                                <span class="titikdua">:</span>
+                                <div class="gender">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Gol. Darah</span>
+                                <span class="titikdua">:</span>
+                                <div class="goldar">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Alamat</span>
+                                <span class="titikdua">:</span>
+                                <div class="alamat">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>RT/RW</span>
+                                <span class="titikdua">:</span>
+                                <div class="rtrw">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Kel/Desa</span>
+                                <span class="titikdua">:</span>
+                                <div class="keldesa">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Kecamatan</span>
+                                <span class="titikdua">:</span>
+                                <div class="kec">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Agama</span>
+                                <span class="titikdua">:</span>
+                                <div class="agama">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Status Perkawinan</span>
+                                <span class="titikdua">:</span>
+                                <div class="kawin">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Pekerjaan</span>
+                                <span class="titikdua">:</span>
+                                <div class="job">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Kewarganegaraan</span>
+                                <span class="titikdua">:</span>
+                                <div class="warga">***</div>
+                            </div>
+                            <div class="sejajar">
+                                <span>Berlaku Hingga</span>
+                                <span class="titikdua">:</span>
+                                <div class="berlaku">***</div>
+                            </div>
+                            
+                        </div>
+                        <div class="right-content-ktp">
+                            <div class="gbr">
+                                <div class="mb-4 d-flex justify-content-center">
+                                    <img src="../multimedia/image/icon-person2.jpg"
+                                    alt="example placeholder" style="width: 115px; height: 140px; margin-left:30% ;" />
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <div class="btn btn-primary btn-rounded">
+                                        <label class="form-label text-white m-1" for="customFile1"></label>
+                                        <input type="file" class="form-control d-none" id="customFile1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <div class="header">
+                        <div class="header-sejajar">
+                            <span><span class="space">-</span></span>
+                            <div class="prov"></div>
+                        </div>
+                        <div class="header-sejajar">
+                            <span></span>
+                            <div class="kota"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END OUTPUT DEPAN -->
+
+            <div class="navigasi">
+                <a href="../index.html">Kembali</a>
+                <h3 class="flip">Lihat Bagian Depan</h3>
+                <a href="./loading.html">Print</a>
+            </div>
+        </div>
+        <!-- END KOLOM OUTPUT -->
+
+    </div>
+    <!-- END MAIN CONTAINER -->
+
+    <script>
+        function populate(sprov, skota){
+            var sprov = document.getElementById(sprov);
+            var skota = document.getElementById(skota);
+
+            skota.innerHTML = "";
+
+            if(sprov.value == "JAWA BARAT"){
+                var optionArray = ['|', 'KOTA BANDUNG|*Kota Bandung',
+                                        'KABUPATEN BANDUNG|Kabupaten Bandung',
+                                        'KABUPATEN BANDUNG BARAT|Kabupaten Bandung Barat',
+                                        'KABUPATEN BEKASI|Kabupaten Bekasi',
+                                        'KABUPATEN BOGOR|Kabupaten Bogor',
+                                        'KABUPATEN CIAMIS|Kabupaten Ciamis',
+                                        'KOTA BANJAR|Kota Banjar',
+                                        'KOTA BEKASI|Kota Bekasi',
+                                        'KOTA BOGOR|Kota Bogor',
+                                        'KOTA CIMAHI|Kota Cimahi'];
+            }
+            else if(sprov.value == "DKI JAKARTA"){
+                var optionArray = ['|', 'JAKARTA PUSAT|Jakarta Pusat',
+                                        'JAKARTA UTARA|Jakarta Utara',
+                                        'JAKARTA BARAT|Jakarta Barat',
+                                        'JAKARTA SELATAN|Jakarta Selatan',
+                                        'JAKARTA TIMUR|Jakarta Timur'];
+            }
+            else if(sprov.value == "ACEH"){
+                var optionArray = ['|', 'KABUPATEN ACEH BARAT|Kabupaten Aceh Barat',
+                                        'KABUPATEN ACEH BARAT DAYA|Kabupaten Aceh Barat Daya',
+                                        'KABUPATEN ACEH BESAR|Kabupaten Aceh Besar',
+                                        'KABUPATEN ACEH JAYA|Kabupaten Aceh Jaya',
+                                        'KOTA BANDA ACEH|Kota Banda Aceh',
+                                        'KOTA LANGSA|Kota Langsa',
+                                        'KOTA LHOKSEUMAWE|Kota Lhokseumawe'];
+            }
+            else if(sprov.value == "JAWA TENGAH"){
+                var optionArray = ['|', 'KABUPATEN BANJARNEGARA|Kabupaten Banjarnegara',
+                                        'KABUPATEN BANYUMAS|Kabupaten Banyumas',
+                                        'KABUPATEN BATANG|Kabupaten Batang',
+                                        'KOTA MAGELANG|Kota Magelang',
+                                        'KOTA PEKALONGAN|Kota Pekalongan',
+                                        'KOTA SALATIGA|Kota Salatiga',
+                                        'KOTA SEMARANG|Kota Semarang',
+                                        'KOTA SURAKARTA|Kota Surakarta'];
+            }
+            for(var option in optionArray){
+                var pair = optionArray[option].split("|");
+                var newoption = document.createElement("option");
+
+                newoption.value = pair[0];
+                newoption.innerHTML = pair[1];
+                skota.options.add(newoption);
+            }
+        }
+
+        document.querySelector('.flip').onmouseenter = () =>{
+        document.querySelector('.cover').style.transform = 'perspective(1000px) rotateY(-180deg)';
+        document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+        }
+
+        document.querySelector('.flip').onmouseleave = () =>{
+        document.querySelector('.cover').style.transform = 'perspective(1000px) rotateY(0deg)';
+        document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+        }
+
+        document.querySelector('.isian-prov').oninput = () =>{
+            document.querySelector('.prov').innerText = document.querySelector('.isian-prov').value;
+        }
+        document.querySelector('.isian-kota').oninput = () =>{
+            document.querySelector('.kota').innerText = document.querySelector('.isian-kota').value;
+        }
+        document.querySelector('.isian-nik').oninput = () =>{
+            document.querySelector('.nik').innerText = document.querySelector('.isian-nik').value;
+        }
+        document.querySelector('.isian-nama').oninput = () =>{
+            document.querySelector('.nama').innerText = document.querySelector('.isian-nama').value;
+        }
+        document.querySelector('.isian-lahir').oninput = () =>{
+            document.querySelector('.lahir').innerText = document.querySelector('.isian-lahir').value;
+        }
+        document.querySelector('.isian-gender').oninput = () =>{
+            document.querySelector('.gender').innerText = document.querySelector('.isian-gender').value;
+        }
+        document.querySelector('.isian-goldar').oninput = () =>{
+            document.querySelector('.goldar').innerText = document.querySelector('.isian-goldar').value;
+        }
+        document.querySelector('.isian-alamat').oninput = () =>{
+            document.querySelector('.alamat').innerText = document.querySelector('.isian-alamat').value;
+        }
+        document.querySelector('.isian-rtrw').oninput = () =>{
+            document.querySelector('.rtrw').innerText = document.querySelector('.isian-rtrw').value;
+        }
+        document.querySelector('.isian-keldesa').oninput = () =>{
+            document.querySelector('.keldesa').innerText = document.querySelector('.isian-keldesa').value;
+        }
+        document.querySelector('.isian-kec').oninput = () =>{
+            document.querySelector('.kec').innerText = document.querySelector('.isian-kec').value;
+        }
+        document.querySelector('.isian-agama').oninput = () =>{
+            document.querySelector('.agama').innerText = document.querySelector('.isian-agama').value;
+        }
+        document.querySelector('.isian-kawin').oninput = () =>{
+            document.querySelector('.kawin').innerText = document.querySelector('.isian-kawin').value;
+        }
+        document.querySelector('.isian-job').oninput = () =>{
+            document.querySelector('.job').innerText = document.querySelector('.isian-job').value;
+        }
+        document.querySelector('.isian-warga').oninput = () =>{
+            document.querySelector('.warga').innerText = document.querySelector('.isian-warga').value;
+        }
+        document.querySelector('.isian-berlaku').oninput = () =>{
+            document.querySelector('.berlaku').innerText = document.querySelector('.isian-berlaku').value;
+        }
+    </script>
+</body>
+</html>
+
+
+                            <!-- <div class="gender"></div>
+                            <div class="alamat"></div>
+                            <div class="rt"></div>
+                            <div class="kelurahan"></div>
+                            <div class="kecamatan"></div>
+                            <div class="agama"></div>
+                            <div class="status"></div>
+                            <div class="pekerjaan"></div>
+                            <div class="negara"></div>
+                            <div class="masa-berlaku"></div> -->
